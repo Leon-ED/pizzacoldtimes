@@ -32,6 +32,9 @@ class StatisticsPanel extends JPanel {
     private void loadStatistics() {
         StringBuilder stats = new StringBuilder("<html>");
 
+        stats.append("<b>Chiffre d'affaire total et nombre de pizzas offertes:</b><br>");
+        stats.append(getTotalRevenueAndFreePizzas());
+
         stats.append("<b>Véhicules n'ayant jamais servi:</b><br>");
         stats.append(getUnusedVehicles());
 
@@ -71,6 +74,22 @@ class StatisticsPanel extends JPanel {
         stats.append("</html>");
 
         statsArea.setText(stats.toString());
+    }
+
+    private String getTotalRevenueAndFreePizzas() {
+        StringBuilder result = new StringBuilder();
+        try {
+            Connection conn = DatabaseConnection.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT SUM(CASE WHEN taillePizza = 'Naine' THEN prixBase * 0.66 WHEN taillePizza = 'Ogresse' THEN prixBase * 1.33 ELSE prixBase END) AS totalRevenue, SUM(CASE WHEN offerte = 1 OR dateLivraison > dateCommande + INTERVAL 30 MINUTE THEN 1 ELSE 0 END) AS totalFreePizzas FROM commande JOIN pizza ON commande.nomPizza = pizza.nomPizza");
+            if (rs.next()) {
+                result.append("Chiffre d'affaire total: ").append(rs.getDouble("totalRevenue")).append("€<br>");
+                result.append("Nombre total de pizzas offertes: ").append(rs.getInt("totalFreePizzas")).append("<br>");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return result.toString();
     }
 
     private String getUnusedVehicles() {
@@ -162,7 +181,7 @@ class StatisticsPanel extends JPanel {
         try {
             Connection conn = DatabaseConnection.getConnection();
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT matricule, COUNT(*) AS lateDeliveries FROM commande WHERE dateLivraison > dateCommande + INTERVAL 45 MINUTE GROUP BY matricule ORDER BY lateDeliveries DESC LIMIT 1");
+            ResultSet rs = stmt.executeQuery("SELECT matricule, COUNT(*) AS lateDeliveries FROM commande WHERE dateLivraison > dateCommande + INTERVAL 30 MINUTE GROUP BY matricule ORDER BY lateDeliveries DESC LIMIT 1");
             if (rs.next()) {
                 int delivererId = rs.getInt("matricule");
                 String delivererDetails = getDelivererDetails(delivererId);
@@ -246,7 +265,7 @@ class StatisticsPanel extends JPanel {
         try {
             Connection conn = DatabaseConnection.getConnection();
             Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT idClient, COUNT(*) AS lateOrders FROM commande WHERE dateLivraison > dateCommande + INTERVAL 45 MINUTE GROUP BY idClient");
+            ResultSet rs = stmt.executeQuery("SELECT idClient, COUNT(*) AS lateOrders FROM commande WHERE dateLivraison > dateCommande + INTERVAL 30 MINUTE GROUP BY idClient");
             while (rs.next()) {
                 int clientId = rs.getInt("idClient");
                 String clientDetails = getClientDetails(clientId);
