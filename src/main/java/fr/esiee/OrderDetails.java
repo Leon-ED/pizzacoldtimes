@@ -10,7 +10,7 @@ import java.sql.*;
 import java.time.Duration;
 
 public class OrderDetails extends JFrame {
-    public static final int PIZZA_IS_LATE = 45;
+    public static final int PIZZA_IS_LATE = 30;
 
     public OrderDetails(int orderId, int clientId) {
         setTitle("Détails de la Commande");

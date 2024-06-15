@@ -82,7 +82,7 @@ public class OrdersList extends JFrame {
                         vehicleDetails,
                         offerte ? 0 : prix,
                         offerte ? "(programme fidélité)" : "",
-                        duration > 45 ? "<br><span style='color:red;'>Pizza offerte due au retard</span>" : ""
+                        duration > 30 ? "<br><span style='color:red;'>Pizza offerte due au retard</span>" : ""
                 );
 
                 // Create a label to display the order details
