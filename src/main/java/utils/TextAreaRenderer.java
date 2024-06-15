@@ -1,10 +1,10 @@
-package fr.esiee;
+package utils;
 
 import javax.swing.*;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
 
-class TextAreaRenderer extends JTextArea implements TableCellRenderer {
+public class TextAreaRenderer extends JTextArea implements TableCellRenderer {
     public TextAreaRenderer() {
         setLineWrap(true);
         setWrapStyleWord(true);

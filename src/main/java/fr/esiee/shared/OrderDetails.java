@@ -1,10 +1,9 @@
-package fr.esiee;
+package fr.esiee.shared;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import javax.swing.*;
-import java.awt.*;
 import java.io.FileOutputStream;
 import java.sql.*;
 import java.time.Duration;

@@ -1,4 +1,7 @@
-package fr.esiee;
+package fr.esiee.manager;
+
+import fr.esiee.shared.CustomTableModel;
+import fr.esiee.shared.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;

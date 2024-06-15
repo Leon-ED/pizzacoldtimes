@@ -1,5 +1,8 @@
 package fr.esiee;
 
+import fr.esiee.client.ClientLoginInterface;
+import fr.esiee.manager.ManagerInterface;
+
 import javax.swing.*;
 import java.awt.*;
 

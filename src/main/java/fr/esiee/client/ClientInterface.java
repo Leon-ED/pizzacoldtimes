@@ -1,4 +1,8 @@
-package fr.esiee;
+package fr.esiee.client;
+
+import fr.esiee.shared.DatabaseConnection;
+import fr.esiee.Main;
+import fr.esiee.shared.OrdersList;
 
 import javax.swing.*;
 import java.awt.*;

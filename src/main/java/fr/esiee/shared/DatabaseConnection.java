@@ -1,4 +1,4 @@
-package fr.esiee;
+package fr.esiee.shared;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

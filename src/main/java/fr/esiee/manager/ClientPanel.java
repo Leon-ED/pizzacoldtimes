@@ -1,4 +1,8 @@
-package fr.esiee;
+package fr.esiee.manager;
+
+import fr.esiee.shared.CustomTableModel;
+import fr.esiee.shared.DatabaseConnection;
+import fr.esiee.shared.OrdersList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -193,13 +197,4 @@ class ClientPanel extends JPanel {
     }
 }
 
-class CustomTableModel extends javax.swing.table.DefaultTableModel {
-    CustomTableModel(Vector<Vector<Object>> data, Vector<String> columnNames) {
-        super(data, columnNames);
-    }
 
-    @Override
-    public boolean isCellEditable(int row, int column) {
-        return false; // All cells are not editable
-    }
-}

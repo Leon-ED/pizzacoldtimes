@@ -1,4 +1,6 @@
-package fr.esiee;
+package fr.esiee.shared;
+
+import fr.esiee.client.ClientInterface;
 
 import javax.swing.*;
 import java.awt.*;

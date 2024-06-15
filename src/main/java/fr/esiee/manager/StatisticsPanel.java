@@ -1,11 +1,11 @@
-package fr.esiee;
+package fr.esiee.manager;
+
+import fr.esiee.shared.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;
 import java.sql.*;
 import java.time.DayOfWeek;
-import java.time.Duration;
-import java.time.LocalDateTime;
 import java.time.format.TextStyle;
 import java.util.Locale;
 

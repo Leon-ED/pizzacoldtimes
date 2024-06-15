@@ -1,4 +1,4 @@
-package fr.esiee;
+package fr.esiee.manager;
 
 import javax.swing.*;
 
