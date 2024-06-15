@@ -1,8 +1,8 @@
-package fr.esiee.client;
+package fr.esiee.pizzacoldtimes.client;
 
-import fr.esiee.shared.DatabaseConnection;
-import fr.esiee.Main;
-import fr.esiee.shared.OrdersList;
+import fr.esiee.pizzacoldtimes.database.DatabaseConnection;
+import fr.esiee.pizzacoldtimes.shared.OrdersList;
+import fr.esiee.pizzacoldtimes.Main;
 
 import javax.swing.*;
 import java.awt.*;

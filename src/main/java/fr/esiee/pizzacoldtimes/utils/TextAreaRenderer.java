@@ -1,4 +1,4 @@
-package utils;
+package fr.esiee.pizzacoldtimes.utils;
 
 import javax.swing.*;
 import javax.swing.table.TableCellRenderer;

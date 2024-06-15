@@ -1,7 +1,8 @@
-package fr.esiee.shared;
+package fr.esiee.pizzacoldtimes.shared;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfWriter;
+import fr.esiee.pizzacoldtimes.database.DatabaseConnection;
 
 import javax.swing.*;
 import java.io.FileOutputStream;

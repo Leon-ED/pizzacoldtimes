@@ -1,4 +1,4 @@
-package fr.esiee.manager;
+package fr.esiee.pizzacoldtimes.manager;
 
 import javax.swing.*;
 

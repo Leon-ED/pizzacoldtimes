@@ -1,4 +1,4 @@
-package fr.esiee.shared;
+package fr.esiee.pizzacoldtimes.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

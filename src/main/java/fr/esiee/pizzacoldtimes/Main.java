@@ -1,7 +1,7 @@
-package fr.esiee;
+package fr.esiee.pizzacoldtimes;
 
-import fr.esiee.client.ClientLoginInterface;
-import fr.esiee.manager.ManagerInterface;
+import fr.esiee.pizzacoldtimes.client.ClientLoginInterface;
+import fr.esiee.pizzacoldtimes.manager.ManagerInterface;
 
 import javax.swing.*;
 import java.awt.*;

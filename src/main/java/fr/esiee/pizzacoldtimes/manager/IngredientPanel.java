@@ -1,7 +1,7 @@
-package fr.esiee.manager;
+package fr.esiee.pizzacoldtimes.manager;
 
-import fr.esiee.shared.CustomTableModel;
-import fr.esiee.shared.DatabaseConnection;
+import fr.esiee.pizzacoldtimes.database.DatabaseConnection;
+import fr.esiee.pizzacoldtimes.utils.CustomTableModel;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,6 +1,6 @@
-package fr.esiee.manager;
+package fr.esiee.pizzacoldtimes.manager;
 
-import fr.esiee.shared.DatabaseConnection;
+import fr.esiee.pizzacoldtimes.database.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;

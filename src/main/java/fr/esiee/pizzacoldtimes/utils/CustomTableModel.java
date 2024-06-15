@@ -1,4 +1,4 @@
-package fr.esiee.shared;
+package fr.esiee.pizzacoldtimes.utils;
 import java.util.Vector;
 
 public class CustomTableModel extends javax.swing.table.DefaultTableModel {
